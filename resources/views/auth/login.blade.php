@@ -19,7 +19,7 @@
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
                     <h1 class="auth-title">Masuk</h1>
-                    <p class="auth-subtitle mb-5">Masuk Menggunakan Email dan Kata Sandi Dengan Benar!</p>
+                    <p class="auth-subtitle mb-5">test Masuk Menggunakan Email dan Kata Sandi Dengan Benar!</p>
 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
