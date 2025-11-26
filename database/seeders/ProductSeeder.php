@@ -19,207 +19,73 @@ class ProductSeeder extends Seeder
     {
         $lastKode = Product::max('code');
         $lastNumber = $lastKode ? intval(substr($lastKode, 2)) : 0;
-        $product =
+
+        $menu = [
             [
-                [
-                    'id_category' => 1, // Living Room
-                    'code' => 'LR-001',
-                    'name' => 'Modern Sofa',
-                    'brand' => 'ComfortPlus',
-                    'stock' => 20,
-                    'price_buy' => '2000000',
-                    'price_sell' => '2500000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 1, // Living Room
-                    'code' => 'LR-002',
-                    'name' => 'Coffee Table',
-                    'brand' => 'WoodArt',
-                    'stock' => 15,
-                    'price_buy' => '750000',
-                    'price_sell' => '950000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 1, // Living Room
-                    'code' => 'LR-003',
-                    'name' => 'TV Stand',
-                    'brand' => 'MediaPro',
-                    'stock' => 12,
-                    'price_buy' => '1200000',
-                    'price_sell' => '1500000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 2, // Bedroom
-                    'code' => 'BR-001',
-                    'name' => 'King Size Bed',
-                    'brand' => 'DreamWell',
-                    'stock' => 10,
-                    'price_buy' => '5000000',
-                    'price_sell' => '6000000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 2, // Bedroom
-                    'code' => 'BR-002',
-                    'name' => 'Wardrobe 3 Doors',
-                    'brand' => 'ClosetPro',
-                    'stock' => 8,
-                    'price_buy' => '3000000',
-                    'price_sell' => '3500000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 2, // Bedroom
-                    'code' => 'BR-003',
-                    'name' => 'Nightstand',
-                    'brand' => 'CozyCorner',
-                    'stock' => 25,
-                    'price_buy' => '500000',
-                    'price_sell' => '700000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 3, // Dining Room
-                    'code' => 'DR-001',
-                    'name' => 'Dining Table Set',
-                    'brand' => 'TableMaster',
-                    'stock' => 5,
-                    'price_buy' => '4000000',
-                    'price_sell' => '4500000',
-                    'unit' => 'set',
-                ],
-                [
-                    'id_category' => 3, // Dining Room
-                    'code' => 'DR-002',
-                    'name' => 'Dining Chair',
-                    'brand' => 'ChairArt',
-                    'stock' => 30,
-                    'price_buy' => '500000',
-                    'price_sell' => '700000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 3, // Dining Room
-                    'code' => 'DR-003',
-                    'name' => 'Buffet Table',
-                    'brand' => 'ServeEase',
-                    'stock' => 8,
-                    'price_buy' => '2000000',
-                    'price_sell' => '2500000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 4, // Office
-                    'code' => 'OF-001',
-                    'name' => 'Ergonomic Chair',
-                    'brand' => 'OfficeEase',
-                    'stock' => 30,
-                    'price_buy' => '1500000',
-                    'price_sell' => '1800000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 4, // Office
-                    'code' => 'OF-002',
-                    'name' => 'Office Desk',
-                    'brand' => 'DeskPro',
-                    'stock' => 20,
-                    'price_buy' => '2500000',
-                    'price_sell' => '3000000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 5, // Outdoor
-                    'code' => 'OD-001',
-                    'name' => 'Garden Bench',
-                    'brand' => 'NatureTouch',
-                    'stock' => 12,
-                    'price_buy' => '1200000',
-                    'price_sell' => '1400000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 5, // Outdoor
-                    'code' => 'OD-002',
-                    'name' => 'Patio Set',
-                    'brand' => 'SunsetEase',
-                    'stock' => 6,
-                    'price_buy' => '3000000',
-                    'price_sell' => '3500000',
-                    'unit' => 'set',
-                ],
-                [
-                    'id_category' => 6, // Kitchen
-                    'code' => 'KT-001',
-                    'name' => 'Kitchen Cabinet',
-                    'brand' => 'CabinetPro',
-                    'stock' => 7,
-                    'price_buy' => '3500000',
-                    'price_sell' => '4000000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 6, // Kitchen
-                    'code' => 'KT-002',
-                    'name' => 'Bar Stool',
-                    'brand' => 'StoolArt',
-                    'stock' => 15,
-                    'price_buy' => '800000',
-                    'price_sell' => '1000000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 7, // Storage
-                    'code' => 'ST-001',
-                    'name' => 'Bookshelf',
-                    'brand' => 'BookHaven',
-                    'stock' => 18,
-                    'price_buy' => '800000',
-                    'price_sell' => '1000000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 7, // Storage
-                    'code' => 'ST-002',
-                    'name' => 'Storage Box',
-                    'brand' => 'OrganizePro',
-                    'stock' => 50,
-                    'price_buy' => '300000',
-                    'price_sell' => '400000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 8, // Kids Room
-                    'code' => 'KR-001',
-                    'name' => 'Kids Study Desk',
-                    'brand' => 'LearnFun',
-                    'stock' => 20,
-                    'price_buy' => '900000',
-                    'price_sell' => '1100000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-                [
-                    'id_category' => 8, // Kids Room
-                    'code' => 'KR-002',
-                    'name' => 'Toy Organizer',
-                    'brand' => 'ToyTidy',
-                    'stock' => 25,
-                    'price_buy' => '600000',
-                    'price_sell' => '800000',
-                    'unit' => 'Pcs (Pieces)',
-                ],
-            ];
+                'id_category' => 1, // Coffee
+                'code' => 'CF-001',
+                'name' => 'Espresso',
+                'brand' => 'Arabica Blend',
+                'stock' => 50,
+                'price_buy' => 10000,
+                'price_sell' => 15000,
+                'unit' => 'Cup',
+                'image' => 'https://images.unsplash.com/photo-1510626176961-4b37d6afc5c5?w=800', // ☕ espresso
+            ],
+            [
+                'id_category' => 1, // Coffee
+                'code' => 'CF-002',
+                'name' => 'Cappuccino',
+                'brand' => 'Creamy Roast',
+                'stock' => 40,
+                'price_buy' => 12000,
+                'price_sell' => 18000,
+                'unit' => 'Cup',
+                'image' => 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800', // ☕ cappuccino
+            ],
+            [
+                'id_category' => 2, // Snack
+                'code' => 'SN-001',
+                'name' => 'French Fries',
+                'brand' => 'CrispyBite',
+                'stock' => 30,
+                'price_buy' => 8000,
+                'price_sell' => 15000,
+                'unit' => 'Plate',
+                'image' => 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800', // 🍟 french fries
+            ],
+            [
+                'id_category' => 2, // Snack
+                'code' => 'SN-002',
+                'name' => 'Chicken Wings',
+                'brand' => 'SpicyBite',
+                'stock' => 25,
+                'price_buy' => 15000,
+                'price_sell' => 25000,
+                'unit' => 'Plate',
+                'image' => 'https://images.unsplash.com/photo-1606755962773-0e7d85d0d5a5?w=800', // 🍗 wings
+            ],
+            [
+                'id_category' => 3, // Dessert
+                'code' => 'DS-001',
+                'name' => 'Chocolate Cake',
+                'brand' => 'SweetTreat',
+                'stock' => 20,
+                'price_buy' => 18000,
+                'price_sell' => 28000,
+                'unit' => 'Slice',
+                'image' => 'https://images.unsplash.com/photo-1605475128023-9bb7a1c7a5b1?w=800', // 🍰 chocolate cake
+            ],
+        ];
+
         $now = Carbon::now();
-        foreach ($product as $index => $products) {
-            $lastNumber++; // Increment for each product
-            $products['code'] = 'BR' . str_pad($lastNumber, 4, '0', STR_PAD_LEFT);
-            $products['created_at'] = $now->copy()->addMinutes($index);
-            $products['updated_at'] = $products['created_at'];
-        
-            Product::create($products); // Ensure $products is passed correctly
+        foreach ($menu as $index => $menus) {
+            $lastNumber++;
+            $menus['code'] = 'MN' . str_pad($lastNumber, 4, '0', STR_PAD_LEFT);
+            $menus['created_at'] = $now->copy()->addMinutes($index);
+            $menus['updated_at'] = $menus['created_at'];
+
+            Product::create($menus);
         }
     }
 }

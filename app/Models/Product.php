@@ -26,6 +26,7 @@ class Product extends Model
         'price_buy',
         'price_sell',
         'unit',
+        'image'
     ];
 
     public function category()
@@ -58,8 +59,8 @@ class Product extends Model
         return $newKode;
     }
 
-    public function transaction()
+    public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'product_id', 'id');
+        return $this->hasMany(Transaction::class, 'id_product', 'id_product');
     }
 }

@@ -1,69 +1,358 @@
 <div>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-header bg-primary text-white">Data Baru</h5>
-                <form wire:submit="save">
-                    <input type="text" wire:mode="code" hidden>
-                    <div class="form-group mt-3">
-                        <label for="category">Kategori</label>
-                        <select wire:model="id_category" id="category" class="form-control">
-                            <option value="">-- Pilih Kategori --</option>
-                            @foreach ($category as $cat)
-                                <option value="{{ $cat->id_category }}">{{ $cat->name }}</option>
-                            @endforeach
-                        </select>
-                        @error('id_category') <span class="text-danger">{{ $message }}</span> @enderror
+    <div class="container-fluid px-4">
+        <div class="cafe-card">
+            <div class="cafe-card-header">
+                <div class="d-flex align-items-center">
+                    <div
+                        style="width: 50px; height: 50px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                        <i class="fas fa-plus" style="font-size: 1.5rem; color: white;"></i>
                     </div>
-                    <div class="mt-3">
-                        <label for="name">Nama Produk <i class="fas fa-file-signature"></i></label>
-                        <input type="text" class="form-control" wire:model="name">
-                        @error('name')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                    <div>
+                        <h4 class="cafe-card-title" style="font-size: 1.3rem;">
+                            <i class="fas fa-coffee me-2"></i>Tambah Produk Baru
+                        </h4>
+                        <p class="cafe-card-subtitle" style="font-size: 0.9rem;">
+                            <i class="fas fa-box me-1"></i>Tambahkan produk baru ke inventaris POS Cafe
+                        </p>
                     </div>
-                    <div class="mt-3">
-                        <label for="brand">Merk Produk <i class="fas fa-tag"></i></label>
-                        <input type="text" class="form-control" wire:model="brand">
-                        @error('brand')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <form wire:submit="save"
+                    style="background: rgba(255, 255, 255, 0.9); padding: 2rem; border-radius: 15px; box-shadow: 0 8px 25px rgba(25, 118, 210, 0.1);">
+                    <input type="text" wire:model="code" hidden>
+
+                    <div class="row g-3">
+                        <!-- Kategori -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-folder me-2"></i>Kategori Produk
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-folder" style="color: #1976d2;"></i>
+                                </span>
+                                <select wire:model="id_category" class="form-select"
+                                    style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    @foreach ($category as $cat)
+                                        <option value="{{ $cat->id_category }}">{{ $cat->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('id_category')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Nama Produk -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-box me-2"></i>Nama Produk
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-box" style="color: #1976d2;"></i>
+                                </span>
+                                <input type="text" class="form-control" wire:model="name"
+                                    placeholder="Masukkan nama produk"
+                                    style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('name')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Merk Produk -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-tag me-2"></i>Merk Produk
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-tag" style="color: #1976d2;"></i>
+                                </span>
+                                <input type="text" class="form-control" wire:model="brand"
+                                    placeholder="Masukkan merk produk"
+                                    style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('brand')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Stok -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-cubes me-2"></i>Jumlah Stok
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-cubes" style="color: #1976d2;"></i>
+                                </span>
+                                <input type="number" class="form-control" wire:model="stock" placeholder="0"
+                                    min="0"
+                                    style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('stock')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Harga Beli -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                <i class="fas fa-money-bill-wave me-2"></i>Harga Beli (Modal)
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(244, 67, 54, 0.1), rgba(239, 83, 80, 0.1)); border: 1px solid rgba(244, 67, 54, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-money-bill-wave" style="color: #d32f2f;"></i>
+                                </span>
+                                <input type="number" class="form-control" wire:model="price_buy" placeholder="0"
+                                    min="0"
+                                    style="border: 1px solid rgba(244, 67, 54, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('price_buy')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Harga Jual -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #2e7d32; font-size: 0.9rem;">
+                                <i class="fas fa-hand-holding-usd me-2"></i>Harga Jual
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(102, 187, 106, 0.1)); border: 1px solid rgba(76, 175, 80, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-hand-holding-usd" style="color: #2e7d32;"></i>
+                                </span>
+                                <input type="number" class="form-control" wire:model="price_sell" placeholder="0"
+                                    min="0"
+                                    style="border: 1px solid rgba(76, 175, 80, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('price_sell')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Satuan -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-weight me-2"></i>Satuan Barang
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-weight" style="color: #1976d2;"></i>
+                                </span>
+                                <select class="form-select" wire:model="unit"
+                                    style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                                    <option value="">== Pilih Satuan ==</option>
+                                    <option value="Pcs (Pieces)">Pcs (Pieces)</option>
+                                    <option value="Set">Set</option>
+                                    <option value="Kg">Kg</option>
+                                    <option value="Liter">Liter</option>
+                                    <option value="Box">Box</option>
+                                </select>
+                            </div>
+                            @error('unit')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <!-- Upload Gambar Produk -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                <i class="fas fa-image me-2"></i>Foto Produk
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background: linear-gradient(135deg, rgba(25,118,210,0.1), rgba(66,165,245,0.1));
+                   border: 1px solid rgba(25,118,210,0.2); border-right: none;
+                   border-radius: 8px 0 0 8px;">
+                                    <i class="fas fa-upload" style="color: #1976d2;"></i>
+                                </span>
+                                <input type="file" wire:model="image" accept="image/*" class="form-control"
+                                    style="border: 1px solid rgba(25,118,210,0.2);
+                   border-left: none;
+                   border-radius: 0 8px 8px 0;
+                   font-weight: 400; font-size: 0.9rem;">
+                            </div>
+                            @error('image')
+                                <div class="text-danger mt-2 small"
+                                    style="background: rgba(244,67,54,0.1);
+                   padding: 0.4rem;
+                   border-radius: 6px;
+                   border-left: 2px solid #f44336;
+                   font-size: 0.8rem;">
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>{{ $message }}
+                                </div>
+                            @enderror
+
+                            <!-- Preview Gambar -->
+                            @if ($image)
+                                <div class="mt-3 text-center">
+                                    <img src="{{ $image->temporaryUrl() }}" alt="Preview Gambar"
+                                        style="width: 150px; height: 150px; object-fit: cover;
+                       border-radius: 10px; border: 2px solid rgba(25,118,210,0.2);
+                       box-shadow: 0 4px 10px rgba(25,118,210,0.1);">
+                                    <p class="text-muted mt-2" style="font-size: 0.8rem;">Preview Gambar Produk</p>
+                                </div>
+                            @endif
+                        </div>
+
+
+                        <!-- Info Section -->
+                        <div class="col-12">
+                            <div class="alert"
+                                style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05)); border: 1px solid rgba(25, 118, 210, 0.2); border-radius: 10px; color: #1976d2;">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Informasi:</strong> Pastikan semua data produk diisi dengan benar. Harga jual
+                                harus lebih tinggi dari harga beli untuk mendapatkan keuntungan.
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-3">
-                        <label for="stock">Stok <i class="fas fa-cubes"></i></label>
-                        <input type="number" class="form-control" wire:model="stock">
-                        @error('stock')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
+
+                    <div class="d-flex gap-3 justify-content-end pt-3"
+                        style="border-top: 1px solid rgba(25, 118, 210, 0.1);">
+                        <a href="{{ route('product.index') }}" class="btn btn-outline-secondary px-4"
+                            style="border-radius: 20px; font-weight: 500; border: 1px solid rgba(108, 117, 125, 0.3); transition: all 0.3s ease; font-size: 0.85rem; padding: 0.4rem 1rem;">
+                            <i class="fas fa-arrow-left me-1"></i>Kembali
+                        </a>
+                        <button type="submit" class="cafe-btn-primary px-4"
+                            style="font-size: 0.85rem; padding: 0.4rem 1rem;">
+                            <i class="fas fa-check-circle me-1"></i>Simpan Produk
+                        </button>
                     </div>
-                    <div class="mt-3">
-                        <label for="price_buy">Harga Beli <i class="fas fa-money-check-alt"></i></label>
-                        <input type="number" class="form-control" wire:model="price_buy">
-                        @error('price_buy')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="mt-3">
-                        <label for="price_sell">Harga Jual <i class="fas fa-hand-holding-usd"></i></label>
-                        <input type="number" class="form-control" wire:model="price_sell">
-                        @error('price_sell')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="mt-3">
-                        <label for="unit">Pilih Satuan Barang <i class="fab fa-unity"></i></label>
-                        <select class="form-control" id="unit" wire:model="unit">
-                            <option value="">==Pilih Satuan Barang==</option>
-                            <option value="Pcs (Pieces)">Pcs (Pieces)</option>
-                            <option value="Set">Set</option>
-                        </select>
-                        @error('unit')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2">Simpan</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- CSS tambahan untuk efek hover dan animasi cafe-style -->
+    <style>
+        .cafe-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(25, 118, 210, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .input-group:hover .input-group-text {
+            background: linear-gradient(135deg, rgba(25, 118, 210, 0.2), rgba(66, 165, 245, 0.2)) !important;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: rgba(25, 118, 210, 0.8);
+            box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+        }
+
+        .cafe-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(25, 118, 210, 0.4);
+        }
+
+        /* Animasi untuk ikon di header */
+        @keyframes bounce-icon {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-3px);
+            }
+
+            60% {
+                transform: translateY(-2px);
+            }
+        }
+
+        .cafe-card-header:hover .fas.fa-coffee {
+            animation: bounce-icon 2s infinite;
+        }
+
+        /* Responsive untuk tablet dan mobile */
+        @media (max-width: 768px) {
+            .row.g-3 {
+                --bs-gutter-x: 1rem;
+                --bs-gutter-y: 1rem;
+            }
+
+            .col-md-6 {
+                margin-bottom: 1rem;
+            }
+
+            .cafe-card-title {
+                font-size: 1.1rem !important;
+            }
+
+            .card-body {
+                padding: 1.5rem !important;
+            }
+
+            .alert {
+                font-size: 0.85rem !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container-fluid {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+
+            .cafe-card {
+                margin-bottom: 1rem;
+            }
+
+            .input-group-text {
+                padding: 0.375rem 0.5rem !important;
+            }
+
+            .form-control,
+            .form-select {
+                font-size: 0.85rem !important;
+            }
+
+            .btn {
+                padding: 0.3rem 0.8rem !important;
+                font-size: 0.8rem !important;
+            }
+        }
+    </style>
 </div>

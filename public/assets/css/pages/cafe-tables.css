@@ -1,0 +1,1033 @@
+/* ===========================================
+   CAFE CASHIER THEME - MODERN CAFE POS SYSTEM
+   ===========================================
+   Tema kasir cafe dengan:
+   - Warna hangat (coklat, krem, orange)
+   - Font Inter/Roboto untuk modernitas
+   - Efek hover dan animasi smooth
+   - Desain responsif untuk semua device
+   - Ikon makanan/minuman yang relevan
+=========================================== */
+
+/* Font Modern untuk Cafe Theme */
+.cafe-font {
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+
+/* ===========================================
+   CAFE CARD STYLES - TEMA CAFE HANGAT
+   ===========================================
+   Kartu dengan tema cafe hangat:
+   - Background dengan tone coklat-krem
+   - Shadow dengan warna hangat
+   - Border radius yang smooth
+=========================================== */
+.cafe-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(240, 248, 255, 0.95) 0%, rgba(224, 242, 255, 0.95) 100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.cafe-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(25, 118, 210, 0.25);
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+/* ===========================================
+   CAFE CARD HEADER - TEMA CAFE HANGAT
+   ===========================================
+   Header kartu dengan tema cafe hangat:
+   - Background gradien coklat-orange
+   - Font Inter/Roboto
+   - Ikon cafe yang relevan
+=========================================== */
+.cafe-card-header, .cafe-header {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9) 0%, rgba(66, 165, 245, 0.9) 50%, rgba(33, 150, 243, 0.9) 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1.5rem;
+    position: relative;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+
+.cafe-card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 15px 15px 0 0;
+}
+
+.cafe-card-title {
+    font-weight: 600;
+    font-family: 'Nunito', cursive;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.cafe-card-subtitle {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ===========================================
+   CAFE TABLE STYLES - EFEK HOVER MODERN
+   ===========================================
+   Tabel dengan tema cafe hangat dan efek hover:
+   - Header dengan gradien coklat-orange
+   - Baris dengan efek scale dan color transition
+   - Font Inter/Roboto untuk konsistensi
+=========================================== */
+.cafe-table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.12);
+    font-size: 0.85rem;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.cafe-table thead th {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9) 0%, rgba(66, 165, 245, 0.9) 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.75rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cafe-table tbody tr {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(25, 118, 210, 0.08);
+}
+
+.cafe-table tbody tr:hover {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.08) 0%, rgba(66, 165, 245, 0.05) 100%) !important;
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* ===========================================
+   CAFE TABLE ROW - EFEK HOVER KHUSUS
+   ===========================================
+   Efek hover khusus untuk baris tabel cafe:
+   - Scale dan translate yang smooth
+   - Color transition pada text
+   - Shadow dengan warna hangat
+=========================================== */
+.cafe-table-row:hover {
+    background: linear-gradient(135deg, rgba(66, 165, 245, 0.08) 0%, rgba(33, 150, 243, 0.05) 100%) !important;
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.cafe-table-row:hover .text-cafe-blue {
+    color: #0d47a1 !important;
+    transition: color 0.3s ease;
+}
+
+.cafe-table-row:hover .cafe-price {
+    color: #2e7d32 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.cafe-table-row:hover .cafe-total {
+    color: #f57c00 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.cafe-table tbody tr:hover .cafe-badge {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.2), rgba(66, 165, 245, 0.2)) !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* ===========================================
+   CAFE FORM ELEMENTS - INPUT DAN BADGE
+   ===========================================
+   Elemen form dengan tema cafe:
+   - Input dengan background krem
+   - Badge dengan warna hangat
+   - Font Inter/Roboto
+=========================================== */
+.cafe-input, .cafe-quantity-input, .cafe-total-input, .cafe-change-input, .cafe-category-select {
+    border: 2px solid rgba(25, 118, 210, 0.2);
+    border-radius: 10px;
+    background: rgba(240, 248, 255, 0.9);
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #1976d2;
+}
+
+.cafe-input:focus, .cafe-quantity-input:focus, .cafe-total-input:focus, .cafe-change-input:focus, .cafe-category-select:focus {
+    border-color: rgba(66, 165, 245, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba(66, 165, 245, 0.25);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.cafe-input-icon {
+    background: rgba(25, 118, 210, 0.1);
+    border: 2px solid rgba(25, 118, 210, 0.2);
+    color: #1976d2;
+}
+
+.cafe-price {
+    color: #2e7d32;
+    font-weight: 700;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+
+.cafe-total {
+    color: #f57c00;
+    font-weight: 700;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+
+.cafe-badge {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1));
+    color: #1976d2;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    transition: all 0.3s ease;
+}
+
+.cafe-badge-success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8), rgba(102, 187, 106, 0.8));
+    color: white;
+}
+
+.cafe-badge-warning {
+    background: linear-gradient(135deg, rgba(66, 165, 245, 0.8), rgba(255, 193, 7, 0.8));
+    color: white;
+}
+
+.cafe-badge-danger {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.8), rgba(239, 83, 80, 0.8));
+    color: white;
+}
+
+/* ===========================================
+   CAFE BUTTON STYLES - TEMA BIRU CAFE
+   ===========================================
+   Tombol dengan tema biru cafe:
+   - Gradien biru modern untuk primary
+   - Efek hover dengan scale dan shadow
+   - Font Inter/Roboto
+=========================================== */
+.cafe-btn-primary, .cafe-add-btn, .cafe-pay-btn {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9));
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+}
+
+.cafe-btn-primary:hover, .cafe-add-btn:hover, .cafe-pay-btn:hover {
+    background: linear-gradient(135deg, rgba(21, 101, 192, 1), rgba(33, 150, 243, 1));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.4);
+}
+
+.cafe-remove-btn {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9));
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.cafe-remove-btn:hover {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 1), rgba(244, 67, 54, 1));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
+}
+
+.cafe-clear-btn {
+    background: linear-gradient(135deg, rgba(158, 158, 158, 0.9), rgba(117, 117, 117, 0.9));
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(158, 158, 158, 0.3);
+}
+
+.cafe-clear-btn:hover {
+    background: linear-gradient(135deg, rgba(117, 117, 117, 1), rgba(97, 97, 97, 1));
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(158, 158, 158, 0.4);
+}
+
+.cafe-btn-outline-primary {
+    border: 1px solid rgba(25, 118, 210, 0.3);
+    color: #1976d2;
+    background: transparent;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.cafe-btn-outline-primary:hover {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9)) !important;
+    border-color: rgba(25, 118, 210, 0.9) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+}
+
+.cafe-btn-outline-danger {
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    color: #d32f2f;
+    background: transparent;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.cafe-btn-outline-danger:hover {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9)) !important;
+    border-color: rgba(244, 67, 54, 0.9) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
+}
+
+.cafe-btn-light {
+    background: rgba(248, 249, 250, 0.9);
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.cafe-btn-light:hover {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product specific styles */
+.product-code {
+    font-family: 'Courier New', monospace;
+    background: rgba(25, 118, 210, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.product-category {
+    background: rgba(66, 165, 245, 0.1);
+    color: #1976d2;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.product-name {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 0.85rem;
+}
+
+.price-buy {
+    font-weight: 600;
+    color: #d32f2f;
+    font-size: 0.8rem;
+}
+
+.price-sell {
+    font-weight: 600;
+    color: #2e7d32;
+    font-size: 0.8rem;
+}
+
+/* Total row styles */
+.total-row {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05));
+    border-top: 2px solid rgba(25, 118, 210, 0.2);
+}
+
+.total-label {
+    font-weight: 700;
+    color: #1976d2;
+    font-size: 0.9rem;
+}
+
+/* User table specific styles */
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-right: 0.6rem;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 0.85rem;
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* Animations */
+@keyframes bounce-icon {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-3px); }
+    60% { transform: translateY(-2px); }
+}
+
+.cafe-card-header:hover .bi-cup-hot {
+    animation: bounce-icon 2s infinite;
+}
+
+@keyframes pulse-avatar {
+    0% { box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.3); }
+    70% { box-shadow: 0 0 0 8px rgba(25, 118, 210, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(25, 118, 210, 0); }
+}
+
+.cafe-table tbody tr:hover .user-avatar {
+    animation: pulse-avatar 2s infinite;
+}
+
+/* Background pattern */
+.main-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1.5" fill="rgba(25,118,210,0.05)"/><circle cx="80" cy="40" r="1" fill="rgba(66,165,245,0.05)"/><circle cx="60" cy="80" r="0.8" fill="rgba(33,150,243,0.05)"/></svg>');
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cafe-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN - CAFE BIRU THEME
+   ===========================================
+   Desain responsif untuk tema biru cafe:
+   - Mobile-first approach
+   - Grid yang adaptif
+   - Layout stack untuk mobile
+=========================================== */
+@media (max-width: 768px) {
+    .cafe-card, .cafe-card-header, .cafe-header {
+        margin-bottom: 1rem !important;
+    }
+
+    .cafe-card-header, .cafe-header {
+        padding: 1rem !important;
+    }
+
+    .cafe-card-title {
+        font-size: 1rem !important;
+    }
+
+    .cafe-btn-primary, .cafe-add-btn, .cafe-pay-btn, .cafe-clear-btn {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .cafe-table th, .cafe-table td {
+        padding: 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .cafe-menu-item {
+        padding: 0.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .cafe-payment-section {
+        padding: 1rem !important;
+    }
+
+    .cafe-cart-header {
+        padding: 1rem !important;
+    }
+
+    .cafe-cart-body {
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .cafe-card .card-body {
+        padding: 1rem !important;
+    }
+
+    .cafe-menu-item {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .cafe-menu-item .menu-info {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .cafe-payment-section .row .col-md-3 {
+        margin-bottom: 1rem !important;
+    }
+
+    .cafe-cart-header h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .cafe-table {
+        font-size: 0.75rem !important;
+    }
+
+    .cafe-table th, .cafe-table td {
+        padding: 0.3rem !important;
+    }
+}
+
+.cafe-table-row:hover {
+        background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(66, 165, 245, 0.05) 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
+        border-radius: 12px;
+    }
+
+    .cafe-table-row:hover .badge {
+        background: linear-gradient(135deg, rgba(25, 118, 210, 0.2), rgba(66, 165, 245, 0.2)) !important;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9)) !important;
+        border-color: rgba(25, 118, 210, 0.9) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+    }
+
+    .btn-outline-danger:hover {
+        background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9)) !important;
+        border-color: rgba(244, 67, 54, 0.9) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
+    }
+
+    .btn-light:hover {
+        background: linear-gradient(135deg, rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Efek untuk ikon di header */
+    @keyframes bounce-icon {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-3px); }
+        60% { transform: translateY(-2px); }
+    }
+
+    .card-header:hover .bi-cup-hot {
+        animation: bounce-icon 2s infinite;
+    }
+
+    /* Gradient background untuk keseluruhan container */
+    .main-content {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .main-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1.5" fill="rgba(25,118,210,0.05)"/><circle cx="80" cy="40" r="1" fill="rgba(66,165,245,0.05)"/><circle cx="60" cy="80" r="0.8" fill="rgba(33,150,243,0.05)"/></svg>');
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .card {
+        position: relative;
+        z-index: 1;
+    }
+
+/* ===========================================
+    CAFE POS LAYOUT STYLES
+    ===========================================
+    Layout styles untuk POS cafe:
+    - Two-column layout dengan responsive grid
+    - Sticky cart section
+    - Product grid dengan placeholder images
+    - Payment summary dengan itemized totals
+=========================================== */
+.cafe-pos-layout {
+    gap: 2rem;
+}
+
+.cafe-products-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.1);
+}
+
+.cafe-cart-section {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.cafe-cart-sticky {
+    position: sticky;
+    top: 2rem;
+}
+
+.cafe-cart-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
+}
+
+.cafe-cart-header {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9));
+    color: white;
+}
+
+.cafe-cart-body {
+    background: rgba(248, 249, 250, 0.8);
+}
+
+.cafe-product-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(240, 248, 255, 0.8), rgba(224, 242, 255, 0.8));
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cafe-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1976d2;
+    font-size: 2rem;
+}
+
+.placeholder-text {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.cafe-product-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cafe-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(25, 118, 210, 0.2);
+}
+
+.cafe-product-body {
+    padding: 1rem;
+}
+
+.cafe-product-title {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.price-amount {
+    font-size: 0.9rem;
+}
+
+.cafe-add-to-cart {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9));
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cafe-add-to-cart:hover {
+    background: linear-gradient(135deg, rgba(21, 101, 192, 1), rgba(33, 150, 243, 1));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+}
+
+.cafe-payment-summary {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.discount-row {
+    background: rgba(25, 118, 210, 0.05);
+    border-bottom: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.discount-row input {
+    border: 1px solid rgba(25, 118, 210, 0.3);
+    border-radius: 6px;
+}
+
+.total-row {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1));
+    border-top: 2px solid rgba(25, 118, 210, 0.3);
+    font-size: 1.1rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(25, 118, 210, 0.1);
+    color: #1976d2;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background: rgba(25, 118, 210, 0.2);
+    transform: scale(1.1);
+}
+
+.cafe-quantity-input {
+    width: 60px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid rgba(25, 118, 210, 0.3);
+}
+
+.cafe-remove-btn {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9));
+    border: none;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.cafe-remove-btn:hover {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 1), rgba(244, 67, 54, 1));
+    transform: scale(1.05);
+}
+
+.cafe-empty-state {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 2px dashed rgba(25, 118, 210, 0.2);
+}
+
+/* ===== MODAL STYLES FOR CAFE THEME ===== */
+
+/* Cafe Modal Styles */
+.cafe-modal .modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(25, 118, 210, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+}
+
+.cafe-modal .modal-header {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.95) 0%, rgba(66, 165, 245, 0.95) 100%);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.cafe-modal .modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.cafe-modal .modal-title {
+    font-weight: 600;
+    font-family: 'Nunito', cursive;
+    font-size: 1.1rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cafe-modal .modal-subtitle {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cafe-modal .modal-body {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.cafe-modal .modal-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cafe-modal .btn-close {
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Cafe Form Styles in Modal */
+.cafe-modal .cafe-form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.08);
+}
+
+.cafe-modal .form-label {
+    color: #1976d2;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.cafe-modal .input-group {
+    margin-bottom: 1rem;
+}
+
+.cafe-modal .input-group-text {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1));
+    border: 1px solid rgba(25, 118, 210, 0.2);
+    color: #1976d2;
+}
+
+.cafe-modal .form-control {
+    border: 1px solid rgba(25, 118, 210, 0.2);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cafe-modal .form-control:focus {
+    border-color: rgba(25, 118, 210, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+/* Cafe Button Styles in Modal */
+.cafe-modal .cafe-btn-primary {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9));
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
+.cafe-modal .cafe-btn-primary:hover {
+    background: linear-gradient(135deg, rgba(21, 101, 192, 1), rgba(33, 150, 243, 1));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+}
+
+.cafe-modal .cafe-btn-secondary {
+    border: 1px solid rgba(108, 117, 125, 0.3);
+    color: #6c757d;
+    background: transparent;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
+.cafe-modal .cafe-btn-secondary:hover {
+    background: rgba(108, 117, 125, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Error Styles in Modal */
+.cafe-modal .error-message {
+    background: rgba(244, 67, 54, 0.1);
+    padding: 0.4rem;
+    border-radius: 6px;
+    border-left: 2px solid #f44336;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Modal Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.cafe-modal .modal-dialog {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Responsive Modal Styles */
+@media (max-width: 768px) {
+    .cafe-modal .modal-dialog {
+        margin: 1rem;
+    }
+
+    .cafe-modal .modal-header {
+        padding: 1rem !important;
+    }
+
+    .cafe-modal .modal-body {
+        padding: 1rem !important;
+    }
+
+    .cafe-modal .modal-title {
+        font-size: 1rem !important;
+    }
+
+    .cafe-modal .modal-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .cafe-modal .cafe-form-container {
+        padding: 1rem !important;
+    }
+
+    .cafe-modal .form-control {
+        font-size: 0.85rem !important;
+    }
+
+    .cafe-modal .cafe-btn-primary,
+    .cafe-modal .cafe-btn-secondary {
+        padding: 0.3rem 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .cafe-modal .modal-dialog {
+        margin: 0.5rem !important;
+    }
+
+    .cafe-modal .modal-header {
+        padding: 0.8rem !important;
+    }
+
+    .cafe-modal .modal-body {
+        padding: 0.8rem !important;
+    }
+
+    .cafe-modal .cafe-form-container {
+        padding: 0.8rem !important;
+    }
+}

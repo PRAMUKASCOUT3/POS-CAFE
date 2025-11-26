@@ -25,6 +25,7 @@ return new class extends Migration
         $table->string('price_buy', 15); // Maksimal 15 karakter
         $table->string('price_sell', 15); // Maksimal 15 karakter
         $table->string('unit', 20); // Maksimal 10 karakter
+        $table->string('image'); // Maksimal 10 karakter
         $table->timestamps(); // created_at dan updated_at
     });
 }

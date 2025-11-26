@@ -26,6 +26,7 @@ class CashierTable extends Component
     protected $paginationTheme = 'bootstrap';
 
     public $search = '';
+    public $selectedCategory = null;
 
     public function mount()
     {
@@ -147,11 +148,28 @@ class CashierTable extends Component
         // Reset pagination when search input is updated
         $this->resetPage();
     }
+
+    public function updatedSelectedCategory()
+    {
+        // Reset pagination when category is changed
+        $this->resetPage();
+    }
+
     public function render()
     {
+        $query = Product::query();
+
+        if ($this->search) {
+            $query->where('name', 'like', '%' . $this->search . '%');
+        }
+
+        if ($this->selectedCategory) {
+            $query->where('id_category', $this->selectedCategory);
+        }
+
         return view('livewire.cashier.cashier-table', [
-            'product' => Product::where('name', 'like', '%' . $this->search . '%')
-                ->paginate(5)
+            'product' => $query->paginate(8),
+            'categories' => \App\Models\Category::all()
         ]);
     }
 }

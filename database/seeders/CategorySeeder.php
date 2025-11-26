@@ -16,34 +16,34 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Living Room',
+                'name' => 'Coffee',
             ],
             [
-                'name' => 'Bedroom',
+                'name' => 'Tea',
             ],
             [
-                'name' => 'Dining Room',
+                'name' => 'Non-Coffee',
             ],
             [
-                'name' => 'Office',
+                'name' => 'Snack',
             ],
             [
-                'name' => 'Outdoor',
+                'name' => 'Dessert',
             ],
             [
-                'name' => 'Kitchen',
+                'name' => 'Main Course',
             ],
             [
-                'name' => 'Storage',
+                'name' => 'Juice',
             ],
             [
-                'name' => 'Kids Room',
+                'name' => 'Smoothies',
             ],
             [
-                'name' => 'Bathroom',
+                'name' => 'Milkshake',
             ],
             [
-                'name' => 'Decor',
+                'name' => 'Mocktail',
             ],
         ]);
     }
