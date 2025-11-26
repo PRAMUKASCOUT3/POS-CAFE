@@ -19,57 +19,81 @@
             @if (Auth()->user()->isAdmin == 2)
                 <div class="row row-card-no-pd">
                     <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                        <div class="card stats-card h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="d-flex justify-content-between w-100 align-items-center">
                                     <div>
-                                        <h4><b>Pengguna/Kasir</b></h4>
+                                        <h5 class="card-title text-primary mb-1">
+                                            <i class="bi bi-people-fill me-2"></i>Pengguna/Kasir
+                                        </h5>
+                                        <p class="text-muted small mb-0">Total pengguna aktif</p>
                                     </div>
-                                    <h4 class="text-info fw-bold">
-                                        <li class="fas fa-users"></li> {{ $user }}
-                                    </h4>
+                                    <div class="text-end">
+                                        <h2 class="text-primary fw-bold mb-0">{{ $user }}</h2>
+                                        <small class="text-success">
+                                            <i class="bi bi-arrow-up-circle me-1"></i>Aktif
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                        <div class="card stats-card h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="d-flex justify-content-between w-100 align-items-center">
                                     <div>
-                                        <h4><b>Produk</b></h4>
+                                        <h5 class="card-title text-success mb-1">
+                                            <i class="bi bi-box-seam-fill me-2"></i>Produk
+                                        </h5>
+                                        <p class="text-muted small mb-0">Total produk tersedia</p>
                                     </div>
-                                    <h4 class="text-success fw-bold">
-                                        <li class="fas fa-boxes"></li> {{ $product }}
-                                    </h4>
+                                    <div class="text-end">
+                                        <h2 class="text-success fw-bold mb-0">{{ $product }}</h2>
+                                        <small class="text-info">
+                                            <i class="bi bi-shop me-1"></i>Tersedia
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                        <div class="card stats-card h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="d-flex justify-content-between w-100 align-items-center">
                                     <div>
-                                        <h4><b>Kategori</b></h4>
+                                        <h5 class="card-title text-warning mb-1">
+                                            <i class="bi bi-tags-fill me-2"></i>Kategori
+                                        </h5>
+                                        <p class="text-muted small mb-0">Jenis produk</p>
                                     </div>
-                                    <h4 class="text-danger fw-bold">
-                                        <li class="fas fa-clipboard-list"></li> {{ $category }}
-                                    </h4>
+                                    <div class="text-end">
+                                        <h2 class="text-warning fw-bold mb-0">{{ $category }}</h2>
+                                        <small class="text-primary">
+                                            <i class="bi bi-diagram-3 me-1"></i>Kategori
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
+                        <div class="card stats-card h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="d-flex justify-content-between w-100 align-items-center">
                                     <div>
-                                        <h4><b>Pemasok</b></h4>
+                                        <h5 class="card-title text-info mb-1">
+                                            <i class="bi bi-truck me-2"></i>Pemasok
+                                        </h5>
+                                        <p class="text-muted small mb-0">Mitra supplier</p>
                                     </div>
-                                    <h4 class="text-secondary fw-bold">
-                                        <li class="fas fa-dolly-flatbed"></li> {{ $supplier }}
-                                    </h4>
+                                    <div class="text-end">
+                                        <h2 class="text-info fw-bold mb-0">{{ $supplier }}</h2>
+                                        <small class="text-success">
+                                            <i class="bi bi-check-circle me-1"></i>Aktif
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>

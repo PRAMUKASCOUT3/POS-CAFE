@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Mazer Admin Dashboard</title>
+    <title>Login Kasir Cafe - POS Cafe</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -12,54 +12,60 @@
     <link rel="stylesheet" href="/assets/css/pages/auth.css">
 </head>
 
-<body>
-    <div id="auth">
-
-        <div class="row h-100">
-            <div class="col-lg-5 col-12">
-                <div id="auth-left">
-                    <h1 class="auth-title">Masuk</h1>
-                    <p class="auth-subtitle mb-5"> Masuk Menggunakan Email dan Kata Sandi Dengan Benar!</p>
-
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-                        <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="email" name="email"
-                                class="form-control form-control-xl @error('email') is-invalid @enderror"
-                                value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
-                            <div class="form-control-icon">
-                                <i class="bi bi-person"></i>
+<body class="bg-light">
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center" style="background: url('/assets/images/bg/4853433.jpg') center/cover no-repeat; position: relative;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);"></div>
+        <div class="row w-100 justify-content-center" style="position: relative; z-index: 1;">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="card shadow-lg border-0 rounded-lg">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                           
+                            <h1 class="display-5 text-white fw-bold mb-2 cafe-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">POS Cafe</h1>
+                            <div class="cafe-icons mb-3">
+                                <i class="bi bi-cup-hot-fill text-info me-2" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
+                                <i class="bi bi-shop text-info" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
                             </div>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <h2 class="card-title mt-3 text-dark fw-bold">Login Kasir</h2>
+                            <p class="text-light lead">Masuk ke Sistem POS Cafe dengan Email dan Kata Sandi Anda</p>
                         </div>
-                        <div class="form-group position-relative has-icon-left mb-4">
-                            <input type="password" name="password"
-                                class="form-control form-control-xl @error('password') is-invalid @enderror" required
-                                autocomplete="current-password" placeholder="Kata Sandi">
-                            <div class="form-control-icon">
-                                <i class="bi bi-shield-lock"></i>
-                            </div>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Masuk</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-7 d-none d-lg-block">
-                <div id="auth-right">
 
+                        <form method="POST" action="{{ route('login') }}" class="user">
+                            @csrf
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" id="email"
+                                    class="form-control @error('email') is-invalid @enderror"
+                                    value="{{ old('email') }}" placeholder="Email Kasir" required autocomplete="email" autofocus>
+                                <label for="email"><i class="bi bi-person me-2"></i>Email Kasir</label>
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="password" name="password" id="password"
+                                    class="form-control @error('password') is-invalid @enderror" required
+                                    autocomplete="current-password" placeholder="Kata Sandi Kasir">
+                                <label for="password"><i class="bi bi-shield-lock me-2"></i>Kata Sandi Kasir</label>
+                                @error('password')
+                                    <div class="invalid-feedback">
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>Masuk sebagai Kasir
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 
