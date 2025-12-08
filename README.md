@@ -28,7 +28,7 @@ Kategori default:
 
 * Tambah ke cart
 * Hitung total otomatis
-* Cetak struk (jika tersedia)
+* Cetak struk
 * Support diskon per item atau global
 
 ### ✅ **Laporan Penjualan**
