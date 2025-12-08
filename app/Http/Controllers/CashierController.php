@@ -123,6 +123,7 @@ class CashierController extends Controller
         return $pdf->download('Laporan_Transaksi.pdf');
     }
 
+    
     public function excel(Request $request)
     {
         // Mengambil filter tanggal dari request
