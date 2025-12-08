@@ -40,6 +40,7 @@ Kategori default:
 
 * Admin
 * Kasir
+* Pemilik
 
 ---
 
