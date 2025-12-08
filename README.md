@@ -46,10 +46,10 @@ Kategori default:
 ## 🛠️ Teknologi yang Digunakan
 
 * **Laravel 10**
-* **Bootstrap / Tailwind**
+* **Bootstrap**
 * **MySQL**
 * **Eloquent ORM**
-* **Livewire (opsional jika digunakan)**
+* **Livewire**
 * **Laragon / XAMPP**
 
 ---
