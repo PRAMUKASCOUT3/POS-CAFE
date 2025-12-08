@@ -18,11 +18,11 @@
                         <button type="submit" class="btn btn-success">Unduh Excel <i
                                 class="fas fa-file-excel"></i></button>
                     </form>
-                    <form action="{{ route('laba.rugi') }}" method="GET" style="margin-right: 10px">
+                    {{-- <form action="{{ route('laba.rugi') }}" method="GET" style="margin-right: 10px">
                         <input type="hidden" name="start_date" value="{{ request('start_date') }}">
                         <input type="hidden" name="end_date" value="{{ request('end_date') }}">
                         <button type="submit" class="btn btn-info">Unduh Laporan Laba Rugi <i class="fas fa-print"></i></button>
-                    </form>
+                    </form> --}}
                     <!-- Filter Form -->
                     <form method="GET" action="{{ route('cashier.report') }}" class="d-flex align-items-center">
                         <div class="d-flex align-items mb-4" style="gap: 10px;">

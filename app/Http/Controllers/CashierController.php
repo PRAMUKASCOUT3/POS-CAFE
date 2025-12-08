@@ -65,8 +65,10 @@ class CashierController extends Controller
         })->get();
 
         // Total pendapatan dan pengeluaran
-        $subtotal = Transaction::all();
-        $total_discount = $subtotal->isNotEmpty() ? $subtotal->sum('subtotal') * (($subtotal->first()->discount ?? 0) / 100): 0;
+        $subtotal = Transaction::when($start_date && $end_date, function ($query) use ($start_date, $end_date) {
+            $query->whereBetween('date', [$start_date, $end_date]);
+        })->get();
+        $total_discount = $subtotal->isNotEmpty() ? $subtotal->sum('subtotal') * (($subtotal->first()->discount ?? 0) / 100) : 0;
         $total_pendapatan = $subtotal->sum('subtotal') - $total_discount;
         $pengeluaran = $expenditure->sum('nominal');
         $total_semua = $total_pendapatan - $pengeluaran;

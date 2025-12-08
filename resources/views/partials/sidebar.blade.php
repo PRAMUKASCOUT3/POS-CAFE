@@ -6,7 +6,7 @@
                 <img src="/assets/images/logo/logo.png" alt="POS Cafe Logo" class="navbar-logo">
             </div>
             <div class="brand-text">
-                <h5 class="mb-0 fw-bold cafe-title" style="font-family: Gravitas One">POS Cafe</h5>
+                <h5 class="mb-0 fw-bold cafe-title" style="font-family: Gravitas One">Widiant Coffee</h5>
                 <small class="text-light opacity-75">Sistem Point of Sale</small>
             </div>
         </a>

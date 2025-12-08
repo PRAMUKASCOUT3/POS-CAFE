@@ -77,16 +77,29 @@
 
                                     <!-- ✅ Gambar Produk -->
                                     <td class="py-2 px-3 text-center">
-                                        @if ($item->image)
-                                            <img src="{{ asset('storage/' . $item->image) }}" alt="Foto Produk"
-                                                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(25, 118, 210, 0.2); box-shadow: 0 2px 6px rgba(25, 118, 210, 0.1);">
+
+                                        @if (filter_var($item->image, FILTER_VALIDATE_URL))
+                                            {{-- Jika gambar berupa URL --}}
+                                            <img src="{{ $item->image }}" alt="{{ $item->name }}"
+                                                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;
+            border: 1px solid rgba(25,118,210,0.2); box-shadow: 0 2px 6px rgba(25,118,210,0.1);">
+                                        @elseif ($item->image)
+                                            {{-- Jika gambar tersimpan di storage --}}
+                                            <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
+                                                style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;
+            border: 1px solid rgba(25,118,210,0.2); box-shadow: 0 2px 6px rgba(25,118,210,0.1);">
                                         @else
+                                            {{-- Jika tidak ada gambar --}}
                                             <div
-                                                style="width: 50px; height: 50px; background: rgba(25,118,210,0.05); display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px dashed rgba(25,118,210,0.2); color: #1976d2;">
+                                                style="width: 50px; height: 50px; background: rgba(25,118,210,0.05);
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 8px; border: 1px dashed rgba(25,118,210,0.2); color: #1976d2;">
                                                 <i class="fas fa-image" style="font-size: 1rem;"></i>
                                             </div>
                                         @endif
+
                                     </td>
+
 
                                     <!-- Kode Produk -->
                                     <td class="py-2 px-3" style="font-weight: 500; color: #424242;">

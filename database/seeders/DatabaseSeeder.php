@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             SupplierSeeder::class,
             CategorySeeder::class,
             ProductSeeder::class,
-            ExpenditureSeeder::class,
+            // ExpenditureSeeder::class,
         ]);
     }
 }

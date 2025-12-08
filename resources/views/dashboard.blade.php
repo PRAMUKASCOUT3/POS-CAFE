@@ -21,7 +21,7 @@
                             <i class="fas fa-coffee fa-2x text-cafe-blue"></i>
                         </div>
                         <div>
-                            <h1 class="mb-1" style="font-family: BBH Sans Bartle">Cafe Biru</h1>
+                            <h1 class="mb-1" style="font-family: BBH Sans Bartle">Widiant Coffe</h1>
                         </div>
                     </div>
                     @php
@@ -338,7 +338,7 @@
                     ]
                 },
                 title: {
-                    text: 'Penjualan Bulanan - Cafe Biru',
+                    text: 'Penjualan Bulanan - Widiant Coffee',
                     align: 'left',
                     style: {
                         fontSize: '16px',

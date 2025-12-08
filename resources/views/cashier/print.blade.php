@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Struk Pembayaran - Cafe Biru</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Struk Pembayaran - Widiant Coffee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -131,7 +133,8 @@
             min-width: 30px;
         }
 
-        .item-price, .item-total {
+        .item-price,
+        .item-total {
             text-align: right;
             min-width: 60px;
         }
@@ -247,6 +250,7 @@
         }
     </style>
 </head>
+
 <body onload="window.print()">
     <div class="receipt-container">
         <!-- Cafe Header -->
@@ -254,10 +258,20 @@
             <div class="cafe-logo">
                 <i class="fas fa-coffee"></i>
             </div>
-            <div class="cafe-name">Cafe Biru</div>
+            <div class="cafe-name">Widiant Coffee</div>
             <div class="cafe-tagline">Modern Coffee Experience</div>
+
+            <!-- ⭐ Tambahan alamat & nomor -->
+            <div class="cafe-address" style="font-size: 0.75rem; margin-top: 5px; line-height: 1.2;">
+                Sipin, Jl. Mawar II, RT.13/RW.no 69,<br>
+                Solok Sipin, Kec. Danau Sipin,<br>
+                Jambi City, Jambi 36124<br>
+                <strong>Telp:</strong> 089514745435
+            </div>
+
             <div class="receipt-perforation"></div>
         </div>
+
 
         <!-- Transaction Info -->
         <div class="receipt-info">
@@ -307,11 +321,11 @@
                     <span>Subtotal:</span>
                     <span>{{ number_format($subtotal, 0, '.', '.') }}</span>
                 </div>
-                @if($cashier['discount'] > 0)
-                <div class="summary-row">
-                    <span>Diskon ({{ $cashier['discount'] }}%):</span>
-                    <span>-{{ number_format($subtotal * $cashier['discount'] / 100, 0, '.', '.') }}</span>
-                </div>
+                @if ($cashier['discount'] > 0)
+                    <div class="summary-row">
+                        <span>Diskon ({{ $cashier['discount'] }}%):</span>
+                        <span>-{{ number_format(($subtotal * $cashier['discount']) / 100, 0, '.', '.') }}</span>
+                    </div>
                 @endif
                 <div class="summary-row total">
                     <span>TOTAL:</span>
@@ -337,6 +351,11 @@
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+
 </html>

@@ -68,14 +68,18 @@
                                                 <div class="card cafe-product-card h-100 border-0 shadow-sm">
                                                     {{-- Product Image Placeholder --}}
                                                     <div class="cafe-product-image position-relative">
-                                                        @if ($item->image)
+                                                        @if (filter_var($item->image, FILTER_VALIDATE_URL))
+                                                            <img src="{{ $item->image }}" alt="{{ $item->name }}"
+                                                                class="img-fluid rounded-top cafe-image"
+                                                                style="object-fit: cover; height: 180px; width: 100%;">
+                                                        @elseif ($item->image)
                                                             <img src="{{ asset('storage/' . $item->image) }}"
                                                                 alt="{{ $item->name }}"
                                                                 class="img-fluid rounded-top cafe-image"
                                                                 style="object-fit: cover; height: 180px; width: 100%;">
                                                         @else
                                                             <div class="cafe-image-placeholder d-flex flex-column align-items-center justify-content-center"
-                                                                style="height: 180px; background-color: #f5f5f5; border-top-left-radius: .5rem; border-top-right-radius: .5rem;">
+                                                                style="height: 180px; background-color: #f5f5f5;">
                                                                 <i class="bi bi-image text-cafe-blue fs-3"></i>
                                                                 <span class="placeholder-text small text-muted">No
                                                                     Image</span>

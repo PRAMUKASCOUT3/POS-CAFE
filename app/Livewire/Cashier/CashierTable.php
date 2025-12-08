@@ -18,7 +18,7 @@ class CashierTable extends Component
     public $date;
     public $status = 'pending';
     public $change = 0;
-    public $discount ;
+    public $discount;
 
     public $products;
 
@@ -116,7 +116,6 @@ class CashierTable extends Component
             'change' => $this->change,
         ]]);
 
-        toastr()->success('Transaksi berhasil!');
         $this->reset(['items', 'subtotal', 'amount_paid', 'discount']);
         return redirect()->route('cashier.print');
     }
@@ -132,9 +131,14 @@ class CashierTable extends Component
 
     public function calculateChange()
     {
-        $discountAmount = ($this->subtotal * $this->discount) / 100;
-        $totalAfterDiscount = $this->subtotal - $discountAmount;
-        $this->change = (float) $this->amount_paid - (float) $totalAfterDiscount;
+        $subtotal = (float) $this->subtotal;
+        $discount = (float) $this->discount;
+        $amountPaid = (float) $this->amount_paid;
+
+        $discountAmount = ($subtotal * $discount) / 100;
+        $totalAfterDiscount = $subtotal - $discountAmount;
+
+        $this->change = $amountPaid - $totalAfterDiscount;
     }
 
     // Fungsi yang otomatis dipanggil ketika amount_paid diperbarui
