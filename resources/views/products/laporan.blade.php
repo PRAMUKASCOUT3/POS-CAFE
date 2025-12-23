@@ -50,7 +50,6 @@
                             </tr>
                         @endforeach
                     </tbody>
-
                     @php
                         $total_buy = 0;
                         $total_sell = 0;
