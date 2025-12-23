@@ -4,8 +4,10 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <a href="{{ route('product.print') }}" class="btn btn-danger mb-3">Unduh PDF <i class="fas fa-file-pdf"></i></a>
-                <a href="{{ route('product.excel') }}" class="btn btn-success mb-3">Unduh Excel <i class="fas fa-file-excel"></i></a>
+                <a href="{{ route('product.print') }}" class="btn btn-danger mb-3">Unduh PDF <i
+                        class="fas fa-file-pdf"></i></a>
+                <a href="{{ route('product.excel') }}" class="btn btn-success mb-3">Unduh Excel <i
+                        class="fas fa-file-excel"></i></a>
                 <h5 class="card-title">Laporan Produk</h5>
                 <table id="example" class="table table-striped mt-2">
                     <thead>
@@ -42,21 +44,22 @@
                                     $origin_price_buy = $original_stock * $item->price_buy;
                                     $origin_price_sell = $original_stock * $item->price_sell;
                                 @endphp
-                                <td>Rp.{{ number_format($origin_price_buy) }}</td>
-                                <td>Rp.{{ number_format($origin_price_sell) }}</td>
+                                <td>Rp.{{ number_format($item->price_buy) }}</td>
+                                <td>Rp.{{ number_format($item->price_sell) }}</td>
                                 <td>{{ $item->unit }}</td>
                             </tr>
                         @endforeach
                     </tbody>
-                    
+
                     @php
                         $total_buy = 0;
                         $total_sell = 0;
 
                         foreach ($products as $product) {
-                            $total_sold = $product->transaction->sum('total_item'); // Using the 'transaction' relationship
-                            // Calculate the original stock
+                            $total_sold = $product->transaction ? $product->transaction->sum('total_item') : 0;
+
                             $original_stock = $product->stock + $total_sold;
+
                             $total_buy += $original_stock * $product->price_buy;
                             $total_sell += $original_stock * $product->price_sell;
                         }

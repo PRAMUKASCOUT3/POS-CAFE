@@ -8,7 +8,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h2 class=" mb-0">
-                                <i class="bi bi-shop me-2"></i>Kasir Cafe Biru
+                                <i class="bi bi-shop me-2"></i>Kasir Widiant Coffee
                             </h2>
                             <p class="cafe-subtitle mb-0">Sistem Point of Sale Interaktif Modern</p>
                         </div>

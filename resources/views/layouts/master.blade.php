@@ -51,7 +51,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <p class="mb-0 text-muted">
-                                    <i class="bi bi-c-circle me-1"></i>2024 POS Cafe - Sistem Point of Sale
+                                    <i class="bi bi-c-circle me-1"></i>2025 Widiant Coffee - Sistem Point of Sale
                                 </p>
                             </div>
                             <div class="col-md-6 text-md-end">
@@ -73,7 +73,7 @@
         {{-- AOS JavaScript untuk animasi ringan --}}
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        {{-- <script src="/assets/js/bootstrap.bundle.min.js"></script> --}}
 
         <script src="/assets/vendors/apexcharts/apexcharts.js"></script>
         <script src="/assets/js/pages/dashboard.js"></script>
