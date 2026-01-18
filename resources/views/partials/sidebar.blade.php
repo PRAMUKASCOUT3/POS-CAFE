@@ -3,7 +3,7 @@
         <!-- Logo and Brand -->
         <a class="navbar-brand d-flex align-items-center" href="/">
             <div class="logo-container me-3">
-                <img src="/assets/images/logo/logo.png" alt="POS Cafe Logo" class="navbar-logo">
+                <img src="/assets/images/logo-cafe.jpg" alt="POS Cafe Logo" class="navbar-logo">
             </div>
             <div class="brand-text">
                 <h5 class="mb-0 fw-bold cafe-title" style="font-family: Gravitas One">Widiant Coffee</h5>

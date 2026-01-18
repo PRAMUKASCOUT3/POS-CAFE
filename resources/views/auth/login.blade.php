@@ -21,7 +21,7 @@
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
                            
-                            <h1 class="display-5 text-white fw-bold mb-2 cafe-title animate__animated animate__fadeInDown animate__delay-0.5s" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Cafe Widdiant</h1>
+                            <h1 class="display-5 text-white fw-bold mb-2 cafe-title animate__animated animate__fadeInDown animate__delay-0.5s" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Cafe Widiant</h1>
                             <div class="cafe-icons mb-3 animate__animated animate__bounceIn animate__delay-0.7s">
                                 <i class="bi bi-cup-hot-fill text-info me-2" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
                                 <i class="bi bi-shop text-info" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
