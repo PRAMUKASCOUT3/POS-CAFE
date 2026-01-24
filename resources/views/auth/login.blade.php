@@ -21,13 +21,13 @@
                     <div class="card-body p-5">
                         <div class="text-center mb-4">
                            
-                            <h1 class="display-5 text-white fw-bold mb-2 cafe-title animate__animated animate__fadeInDown animate__delay-0.5s" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">Cafe Widiant</h1>
+                            <h1 class="display-4 text-dark fw-bold mb-2 cafe-title animate__animated animate__fadeInDown animate__delay-0.5s" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 3rem;">Cafe Widiant</h1>
                             <div class="cafe-icons mb-3 animate__animated animate__bounceIn animate__delay-0.7s">
                                 <i class="bi bi-cup-hot-fill text-info me-2" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
                                 <i class="bi bi-shop text-info" style="font-size: 2.5rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));"></i>
                             </div>
                             <h2 class="card-title mt-3 text-dark fw-bold animate__animated animate__fadeInLeft animate__delay-1.2s">Login Kasir</h2>
-                            <p class="text-muted lead animate__animated animate__fadeInRight animate__delay-1.4s">Masuk ke Sistem POS Cafe dengan Email dan Kata Sandi Anda</p>
+                            <p class="text-muted lead animate__animated animate__fadeInRight animate__delay-1.4s" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Masuk ke Sistem POS Cafe dengan Email dan Kata Sandi Anda</p>
                         </div>
 
                         <form method="POST" action="{{ route('login') }}" class="user animate__animated animate__fadeInUp animate__delay-1.6s">

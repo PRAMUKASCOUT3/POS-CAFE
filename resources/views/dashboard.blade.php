@@ -41,7 +41,7 @@
                             </div>
                             <div>
                                 <h6 class="mb-0" style="font-family: 'Momo Signature'">Selamat Datang!</h6>
-                                <small class="text-muted">{{ Auth::user()->name }}</small>
+                                <small class="text-muted" style="font-size: 1rem; font-weight: 500;">{{ Auth::user()->name }}</small>
                             </div>
                         </div>
                     </div>
@@ -64,11 +64,11 @@
                                         <h5 class="card-title text-primary mb-1">
                                             <i class="bi bi-people-fill me-2"></i>Pengguna/Kasir
                                         </h5>
-                                        <p class="text-muted small mb-0">Total pengguna aktif</p>
+                                        <p class="text-muted mb-0" style="font-size: 1rem; font-weight: 500;">Total pengguna aktif</p>
                                     </div>
                                     <div class="text-end">
                                         <h2 class="text-primary fw-bold mb-0">{{ $user }}</h2>
-                                        <small class="text-success">
+                                        <small class="text-success" style="font-size: 1rem; font-weight: 500;">
                                             <i class="bi bi-arrow-up-circle me-1"></i>Aktif
                                         </small>
                                     </div>
@@ -85,11 +85,11 @@
                                         <h5 class="card-title text-success mb-1">
                                             <i class="bi bi-box-seam-fill me-2"></i>Produk
                                         </h5>
-                                        <p class="text-muted small mb-0">Total produk tersedia</p>
+                                        <p class="text-muted mb-0" style="font-size: 1rem; font-weight: 500;">Total produk tersedia</p>
                                     </div>
                                     <div class="text-end">
                                         <h2 class="text-success fw-bold mb-0">{{ $product }}</h2>
-                                        <small class="text-info">
+                                        <small class="text-info" style="font-size: 1rem; font-weight: 500;">
                                             <i class="bi bi-shop me-1"></i>Tersedia
                                         </small>
                                     </div>
@@ -106,11 +106,11 @@
                                         <h5 class="card-title text-warning mb-1">
                                             <i class="bi bi-tags-fill me-2"></i>Kategori
                                         </h5>
-                                        <p class="text-muted small mb-0">Jenis produk</p>
+                                        <p class="text-muted mb-0" style="font-size: 1rem; font-weight: 500;">Jenis produk</p>
                                     </div>
                                     <div class="text-end">
                                         <h2 class="text-warning fw-bold mb-0">{{ $category }}</h2>
-                                        <small class="text-primary">
+                                        <small class="text-primary" style="font-size: 1rem; font-weight: 500;">
                                             <i class="bi bi-diagram-3 me-1"></i>Kategori
                                         </small>
                                     </div>
@@ -180,7 +180,7 @@
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="mb-0 cafe-product-name">{{ $product->name }}</h6>
-                                            <small class="text-muted">{{ $product->total_sold ?? 0 }} terjual</small>
+                                            <small class="text-muted" style="font-size: 1rem; font-weight: 500;">{{ $product->total_sold ?? 0 }} terjual</small>
                                         </div>
                                         <div class="cafe-product-price">
                                             <span class="fw-bold text-success">Rp

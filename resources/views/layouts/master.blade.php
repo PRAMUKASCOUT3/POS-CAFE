@@ -50,12 +50,12 @@
                     <div class="container-fluid py-4">
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <p class="mb-0 text-muted">
+                                <p class="mb-0 text-muted" style="font-size: 1rem; font-weight: 500;">
                                     <i class="bi bi-c-circle me-1"></i>2025 Widiant Coffee - Sistem Point of Sale
                                 </p>
                             </div>
                             <div class="col-md-6 text-md-end">
-                                <p class="mb-0 text-muted">
+                                <p class="mb-0 text-muted" style="font-size: 1rem; font-weight: 500;">
                                     <i class="bi bi-cup-hot me-1"></i>Dibuat untuk kemudahan transaksi kafe
                                 </p>
                             </div>

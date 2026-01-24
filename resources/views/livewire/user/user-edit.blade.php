@@ -7,10 +7,10 @@
                         <i class="fas fa-user" style="font-size: 1.5rem; color: white;"></i>
                     </div>
                     <div>
-                        <h4 class="cafe-card-title" style="font-size: 1.3rem;">
+                        <h4 class="cafe-card-title text-white" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-coffee me-2"></i>Edit Data Kasir
                         </h4>
-                        <p class="cafe-card-subtitle" style="font-size: 0.9rem;">
+                        <p class="cafe-card-subtitle" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-edit me-1"></i>Perbarui informasi kasir sistem POS Cafe
                         </p>
                     </div>
@@ -22,13 +22,13 @@
                     <div class="col-lg-6">
                         <div class="cafe-card" style="border-radius: 12px; background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid rgba(25, 118, 210, 0.2);">
                             <div class="card-header" style="background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9)); color: white; border-radius: 12px 12px 0 0 !important; border: none; padding: 1rem;">
-                                <h6 class="mb-0" style="font-weight: 600; font-size: 1rem;">
+                                <h6 class="mb-0 text-white" style="font-weight: 600; font-size: 1rem;">
                                     <i class="fas fa-eye me-2"></i>Data Lama
                                 </h6>
                             </div>
                             <div class="card-body p-3">
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #f44336;">
                                         <i class="fas fa-user-circle me-2"></i>Nama Pengguna / Kasir
                                     </label>
                                     <div class="input-group">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #f44336;">
                                         <i class="fas fa-envelope me-2"></i>Alamat Email
                                     </label>
                                     <div class="input-group">
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #f44336;">
                                         <i class="fas fa-lock me-2"></i>Kata Sandi
                                     </label>
                                     <div class="input-group">
@@ -68,14 +68,14 @@
                     <div class="col-lg-6">
                         <div class="cafe-card" style="border-radius: 12px; background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid rgba(25, 118, 210, 0.2);">
                             <div class="card-header" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9)); color: white; border-radius: 12px 12px 0 0 !important; border: none; padding: 1rem;">
-                                <h6 class="mb-0" style="font-weight: 600; font-size: 1rem;">
+                                <h6 class="mb-0 text-white" style="font-weight: 600; font-size: 1rem;">
                                     <i class="fas fa-edit me-2"></i>Data Baru
                                 </h6>
                             </div>
                             <div class="card-body p-3">
                                 <form wire:submit="update">
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-user-circle me-2"></i>Nama Pengguna / Kasir
                                         </label>
                                         <div class="input-group">
@@ -91,7 +91,7 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-envelope me-2"></i>Alamat Email
                                         </label>
                                         <div class="input-group">
@@ -107,7 +107,7 @@
                                         @enderror
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-lock me-2"></i>Kata Sandi Baru
                                         </label>
                                         <div class="input-group">
@@ -124,7 +124,7 @@
                                                 <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
                                             </div>
                                         @enderror
-                                        <div class="form-text" style="color: #666; font-size: 0.75rem;">
+                                        <div class="form-text" style="font-size: 1rem; font-weight: 500; color: #666;">
                                             <i class="fas fa-info-circle me-1"></i>Kosongkan jika tidak ingin mengubah kata sandi
                                         </div>
                                     </div>

@@ -7,12 +7,28 @@ use Livewire\Component;
 
 class CategoryTabel extends Component
 {
-    public $categories;
+    public $categories, $name;
     protected $listeners = ['DeleteUser' => 'render'];
 
     public function mount()
     {
         $this->categories = Category::orderBy('created_at','desc')->get();
+    }
+     public function save()
+    {
+        $this->validate([
+            'name' => 'required'
+        ]);
+
+        Category::create([
+            'name' => $this->name,
+        ]);
+
+        toastr()->success('Data Berhasil Ditambahkan');
+
+        $this->reset(['name']);
+
+        redirect()->route('category.index');
     }
     public function render()
     {

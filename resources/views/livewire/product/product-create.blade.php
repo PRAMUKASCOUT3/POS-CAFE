@@ -8,10 +8,10 @@
                         <i class="fas fa-plus" style="font-size: 1.5rem; color: white;"></i>
                     </div>
                     <div>
-                        <h4 class="cafe-card-title" style="font-size: 1.3rem;">
+                        <h4 class="cafe-card-title text-white" style="font-size: 1.3rem; font-weight: 500;">
                             <i class="fas fa-coffee me-2"></i>Tambah Produk Baru
                         </h4>
-                        <p class="cafe-card-subtitle" style="font-size: 0.9rem;">
+                        <p class="cafe-card-subtitle" style="font-size: 0.8rem; font-weight: 500;">
                             <i class="fas fa-box me-1"></i>Tambahkan produk baru ke inventaris POS Cafe
                         </p>
                     </div>
@@ -25,7 +25,7 @@
                     <div class="row g-3">
                         <!-- Kategori -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-folder me-2"></i>Kategori Produk
                             </label>
                             <div class="input-group">
@@ -35,9 +35,9 @@
                                 </span>
                                 <select wire:model="id_category" class="form-select"
                                     style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
-                                    <option value="">-- Pilih Kategori --</option>
+                                    <option style="font-size: 1rem; font-weight: 500;" value="">-- Pilih Kategori --</option>
                                     @foreach ($category as $cat)
-                                        <option value="{{ $cat->id_category }}">{{ $cat->name }}</option>
+                                        <option style="font-size: 1rem; font-weight: 500;" value="{{ $cat->id_category }}">{{ $cat->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -51,7 +51,7 @@
 
                         <!-- Nama Produk -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-box me-2"></i>Nama Produk
                             </label>
                             <div class="input-group">
@@ -73,7 +73,7 @@
 
                         <!-- Merk Produk -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-tag me-2"></i>Merk Produk
                             </label>
                             <div class="input-group">
@@ -95,7 +95,7 @@
 
                         <!-- Stok -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-cubes me-2"></i>Jumlah Stok
                             </label>
                             <div class="input-group">
@@ -117,7 +117,7 @@
 
                         <!-- Harga Beli -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-money-bill-wave me-2"></i>Harga Beli (Modal)
                             </label>
                             <div class="input-group">
@@ -139,7 +139,7 @@
 
                         <!-- Harga Jual -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #2e7d32; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-hand-holding-usd me-2"></i>Harga Jual
                             </label>
                             <div class="input-group">
@@ -161,7 +161,7 @@
 
                         <!-- Satuan -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-weight me-2"></i>Satuan Barang
                             </label>
                             <div class="input-group">
@@ -171,12 +171,9 @@
                                 </span>
                                 <select class="form-select" wire:model="unit"
                                     style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
-                                    <option value="">== Pilih Satuan ==</option>
-                                    <option value="Pcs (Pieces)">Pcs (Pieces)</option>
-                                    <option value="Set">Set</option>
-                                    <option value="Kg">Kg</option>
-                                    <option value="Liter">Liter</option>
-                                    <option value="Box">Box</option>
+                                    <option style="font-size: 1rem; font-weight: 500;" value="">== Pilih Satuan ==</option>
+                                    <option style="font-size: 1rem; font-weight: 500;" value="Pcs (Pieces)">Pcs (Pieces)</option>
+                                    <option style="font-size: 1rem; font-weight: 500;" value="Cup">Cup</option>
                                 </select>
                             </div>
                             @error('unit')
@@ -189,7 +186,7 @@
 
                         <!-- Upload Gambar Produk -->
                         <div class="col-md-6">
-                            <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                 <i class="fas fa-image me-2"></i>Foto Produk
                             </label>
                             <div class="input-group">
@@ -231,8 +228,8 @@
 
                         <!-- Info Section -->
                         <div class="col-12">
-                            <div class="alert"
-                                style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05)); border: 1px solid rgba(25, 118, 210, 0.2); border-radius: 10px; color: #1976d2;">
+                            <div class="alert font-bold text-info"
+                                style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05)); border: 1px solid rgba(25, 118, 210, 0.2); border-radius: 10px;">
                                 <i class="fas fa-info-circle me-2"></i>
                                 <strong>Informasi:</strong> Pastikan semua data produk diisi dengan benar. Harga jual
                                 harus lebih tinggi dari harga beli untuk mendapatkan keuntungan.

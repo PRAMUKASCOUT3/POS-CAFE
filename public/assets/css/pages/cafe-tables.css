@@ -174,7 +174,7 @@
     border: 2px solid rgba(25, 118, 210, 0.2);
     border-radius: 10px;
     background: rgba(240, 248, 255, 0.9);
-    font-family: 'Inter', 'Roboto', sans-serif !important;
+    /* font-family: 'Inter', 'Roboto', sans-serif !important; */
     font-weight: 500;
     transition: all 0.3s ease;
     color: #1976d2;

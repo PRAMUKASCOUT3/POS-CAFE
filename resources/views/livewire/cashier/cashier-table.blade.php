@@ -10,10 +10,10 @@
                             <h2 class=" mb-0">
                                 <i class="bi bi-shop me-2"></i>Kasir Widiant Coffee
                             </h2>
-                            <p class="cafe-subtitle mb-0">Sistem Point of Sale Interaktif Modern</p>
+                            <p class="cafe-subtitle mb-0" style="font-size: 1rem; font-weight: 500;">Sistem Point of Sale Interaktif Modern</p>
                         </div>
-                        <div class="cafe-cart-counter" id="cart-counter">
-                            <div class="counter-display">
+                        <div class="cafe-cart-counter" style="font-size: 1rem; font-weight: 500;" id="cart-counter">
+                            <div class="counter-display" >
                                 <i class="bi bi-cart3 counter-icon"></i>
                                 <span class="counter-number" id="cart-count">{{ count($items) }}</span>
                                 <span class="counter-label">item</span>
@@ -45,11 +45,11 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <select class="form-select cafe-category-select"
+                                            <select class="form-select cafe-category-select" 
                                                 wire:model.live="selectedCategory">
-                                                <option value="">Semua Kategori</option>
+                                                <option style="font-size: 1rem; font-weight: 500;" value="">Semua Kategori</option>
                                                 @foreach ($categories as $category)
-                                                    <option value="{{ $category->id_category }}">{{ $category->name }}
+                                                    <option style="font-size: 1rem; font-weight: 500;" value="{{ $category->id_category }}">{{ $category->name }}
                                                     </option>
                                                 @endforeach
                                             </select>
@@ -98,7 +98,7 @@
                                                                 Rp {{ number_format($item->price_sell, 0, ',', '.') }}
                                                             </span>
                                                         </div>
-                                                        <div class="cafe-product-stock text-muted small mb-3">
+                                                        <div class="cafe-product-stock text-muted small mb-3" style="font-size: 0.9rem; font-weight: 500;">
                                                             <i class="bi bi-box-seam me-1"></i>Stok: {{ $item->stock }}
                                                         </div>
 
@@ -142,7 +142,7 @@
                                             <h4 class="text-white mb-0">
                                                 <i class="bi bi-receipt me-2"></i>Keranjang Pesanan
                                             </h4>
-                                            <span class="cart-item-count ms-2" id="cart-item-count">
+                                            <span class="cart-item-count ms-2" id="cart-item-count" style="font-size: 1rem; font-weight: 500;">
                                                 ({{ count($items) }} item)
                                             </span>
                                         </div>
@@ -263,13 +263,13 @@
                                             <div class="mb-3">
                                                 <div
                                                     class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                                                    <span class="text-muted">Subtotal:</span>
+                                                    <span class="text-muted fw-bold" >Subtotal:</span>
                                                     <span class="fw-bold text-cafe-blue">Rp
                                                         {{ number_format($subtotal, 0, ',', '.') }}</span>
                                                 </div>
                                                 <div
                                                     class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                                                    <span class="text-muted">Diskon ({{ $discount }}%):</span>
+                                                    <span class="text-muted fw-bold">Diskon ({{ $discount }}%):</span>
                                                     <span class="fw-bold text-success">-Rp
                                                         {{ number_format(($subtotal * $discount) / 100, 0, ',', '.') }}</span>
                                                 </div>

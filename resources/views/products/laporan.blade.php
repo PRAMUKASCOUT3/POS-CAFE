@@ -73,4 +73,33 @@
             </div>
         </div>
     </div>
+
+    <style>
+        #example {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
+            font-size: 14.5px;
+            color: #212529;
+        }
+
+        #example thead th {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #example tbody td {
+            font-weight: 500;
+        }
+
+        #example tfoot td {
+            font-weight: 700 !important;
+            /* paksa bold */
+            color: #198754;
+            /* hijau tegas */
+        }
+
+        #example tfoot tr {
+            background-color: #f8fdf9;
+            /* biar nggak pucat */
+        }
+    </style>
 @endsection

@@ -86,10 +86,12 @@
                         {{-- Total Bulan Ini --}}
                         @if ($totalThisMonth > 0)
                             <tfoot>
-                                <tr class="table-light">
-                                    <td colspan="3" class="text-center fw-bold">Total Pengeluaran Bulan Ini</td>
-                                    <td colspan="2" class="fw-bold text-success">
-                                        Rp. {{ number_format($totalThisMonth, 0, ',', '.') }}
+                                <tr>
+                                    <td colspan="3" class="text-center">
+                                        <strong>Total Pengeluaran Bulan Ini</strong>
+                                    </td>
+                                    <td colspan="2" class=" text-success">
+                                        <strong>Rp {{ number_format($totalThisMonth, 0, ',', '.') }}</strong>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -97,16 +99,19 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="5" class="text-center text-muted fst-italic">
-                                        Tidak ada pengeluaran untuk bulan ini
+                                        <strong>Tidak ada pengeluaran untuk bulan ini</strong>
                                     </td>
                                 </tr>
                             </tfoot>
                         @endif
+
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
@@ -116,10 +121,10 @@
                             <i class="fas fa-wallet" style="color: darkblue"></i>
                         </div>
                         <div>
-                            <h5 class="modal-title fw-bold mb-0" id="exampleModalLabel">Tambah Kategori
+                            <h5 class="modal-title fw-bold mb-0 text-white" id="exampleModalLabel">Tambah Penngeluaran
                                 Baru</h5>
-                            <small class="text-light opacity-75">
-                                <i class="fas fa-tags me-1"></i>Tambahkan kategori menu di POS Café Anda
+                            <small class="text-light opacity-75" style="font-size: 1rem; font-weight: 500;">
+                                <i class="fas fa-tags me-1"></i>Tambahkan Pengeluaran di POS Café Anda
                             </small>
                         </div>
                     </div>
@@ -130,7 +135,7 @@
                 <div class="modal-body">
                     <form wire:submit.prevent="save">
                         <div class="mb-3">
-                            <label for="date" class="form-label fw-semibold">
+                            <label for="date" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                 <i class="fas fa-calendar-week me-1"></i>Tanggal Pengeluaran
                             </label>
                             <input type="date" id="date" class="form-control form-control-lg" wire:model="date"
@@ -143,7 +148,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="description" class="form-label fw-semibold">
+                            <label for="description" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                 <i class="bi bi-textarea-resize me-1"></i>Deskripsi Pengeluaran
                             </label>
                             <textarea id="description" wire:model="description" class="form-control" rows="3"
@@ -157,7 +162,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="nominal" class="form-label fw-semibold">
+                            <label for="nominal" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                 <i class="bi bi-cash-stack me-1"></i>Nominal Pengeluaran (Rp)
                             </label>
                             <div class="input-group">
@@ -185,11 +190,39 @@
                     </form>
                 </div>
 
-                <div class="modal-footer bg-light border-0 text-muted small">
+                <div class="modal-footer bg-light border-0 text-muted small" style="font-size: 1rem; font-weight: 500;">
                     <i class="fas fa-info-circle me-1"></i>Pastikan nama kategori unik agar tidak
                     duplikat.
                 </div>
             </div>
         </div>
     </div>
+    <style>
+        #example {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
+            font-size: 14.5px;
+            color: #212529;
+        }
+
+        #example thead th {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #example tbody td {
+            font-weight: 500;
+        }
+
+        #example tfoot td {
+            font-weight: 700 !important;
+            /* paksa bold */
+            color: #198754;
+            /* hijau tegas */
+        }
+
+        #example tfoot tr {
+            background-color: #f8fdf9;
+            /* biar nggak pucat */
+        }
+    </style>
 </div>

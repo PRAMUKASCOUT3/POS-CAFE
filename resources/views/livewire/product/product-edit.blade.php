@@ -7,10 +7,10 @@
                         <i class="fas fa-edit" style="font-size: 1.5rem; color: white;"></i>
                     </div>
                     <div>
-                        <h4 class="cafe-card-title" style="font-size: 1.3rem;">
+                        <h4 class="cafe-card-title text-white" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-coffee me-2"></i>Edit Produk Cafe
                         </h4>
-                        <p class="cafe-card-subtitle" style="font-size: 0.9rem;">
+                        <p class="cafe-card-subtitle" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-box me-1"></i>Perbarui informasi produk di sistem POS Cafe
                         </p>
                     </div>
@@ -22,13 +22,13 @@
                     <div class="col-lg-6">
                         <div class="cafe-card" style="border-radius: 12px; background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid rgba(25, 118, 210, 0.2);">
                             <div class="card-header" style="background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(239, 83, 80, 0.9)); color: white; border-radius: 12px 12px 0 0 !important; border: none; padding: 1rem;">
-                                <h6 class="mb-0" style="font-weight: 600; font-size: 1rem;">
+                                <h6 class="mb-0 text-white" style="font-weight: 600; font-size: 1rem;">
                                     <i class="fas fa-eye me-2"></i>Data Lama
                                 </h6>
                             </div>
                             <div class="card-body p-3">
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-folder me-2"></i>Kategori Produk
                                     </label>
                                     <div class="input-group">
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-box me-2"></i>Nama Produk
                                     </label>
                                     <div class="input-group">
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-tag me-2"></i>Merk Produk
                                     </label>
                                     <div class="input-group">
@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-cubes me-2"></i>Stok Lama
                                     </label>
                                     <div class="input-group">
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-money-bill-wave me-2"></i>Harga Beli Lama
                                     </label>
                                     <div class="input-group">
@@ -83,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-hand-holding-usd me-2"></i>Harga Jual Lama
                                     </label>
                                     <div class="input-group">
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                    <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                         <i class="fas fa-weight me-2"></i>Satuan Lama
                                     </label>
                                     <div class="input-group">
@@ -112,7 +112,7 @@
                     <div class="col-lg-6">
                         <div class="cafe-card" style="border-radius: 12px; background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid rgba(25, 118, 210, 0.2);">
                             <div class="card-header" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(66, 165, 245, 0.9)); color: white; border-radius: 12px 12px 0 0 !important; border: none; padding: 1rem;">
-                                <h6 class="mb-0" style="font-weight: 600; font-size: 1rem;">
+                                <h6 class="mb-0 text-white" style="font-weight: 600; font-size: 1rem;">
                                     <i class="fas fa-edit me-2"></i>Data Baru
                                 </h6>
                             </div>
@@ -121,21 +121,21 @@
                                     <input type="text" wire:mode="code" hidden>
 
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-folder me-2"></i>Kategori Produk
                                         </label>
                                         <div class="input-group">
                                             <span class="input-group-text" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.1), rgba(66, 165, 245, 0.1)); border: 1px solid rgba(25, 118, 210, 0.2); border-right: none; border-radius: 8px 0 0 8px;">
                                                 <i class="fas fa-folder" style="color: #1976d2;"></i>
                                             </span>
-                                            <select wire:model="category_id" class="form-select" style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
-                                                <option value="">== Pilih Kategori Produk ==</option>
+                                            <select wire:model="id_category" class="form-select" style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
+                                                <option style="font-size: 1rem; font-weight: 500;" value="">== Pilih Kategori Produk ==</option>
                                                 @foreach ($category as $item)
-                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                    <option style="font-size: 1rem; font-weight: 500;" value="{{ $item->id_category }}">{{ $item->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        @error('category_id')
+                                        @error('id_category')
                                             <div class="text-danger mt-2 small" style="background: rgba(244, 67, 54, 0.1); padding: 0.4rem; border-radius: 6px; border-left: 2px solid #f44336; font-size: 0.8rem;">
                                                 <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
                                             </div>
@@ -143,7 +143,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-box me-2"></i>Nama Produk
                                         </label>
                                         <div class="input-group">
@@ -160,7 +160,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-tag me-2"></i>Merk Produk
                                         </label>
                                         <div class="input-group">
@@ -178,7 +178,7 @@
 
                                     <!-- Stok Section -->
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-cubes me-2"></i>Update Stok Produk
                                         </label>
                                         <div class="row g-2">
@@ -209,7 +209,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label fw-semibold" style="color: #d32f2f; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #d32f2f;">
                                             <i class="fas fa-money-bill-wave me-2"></i>Harga Beli Baru
                                         </label>
                                         <div class="input-group">
@@ -243,7 +243,7 @@
                                     </div>
 
                                     <div class="mb-4">
-                                        <label class="form-label fw-semibold" style="color: #1976d2; font-size: 0.9rem;">
+                                        <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500; color: #1976d2;">
                                             <i class="fas fa-weight me-2"></i>Satuan Barang
                                         </label>
                                         <div class="input-group">
@@ -251,12 +251,9 @@
                                                 <i class="fas fa-weight" style="color: #1976d2;"></i>
                                             </span>
                                             <select class="form-select" wire:model="unit" style="border: 1px solid rgba(25, 118, 210, 0.2); border-left: none; border-radius: 0 8px 8px 0; font-weight: 400; font-size: 0.9rem;">
-                                                <option value="">== Pilih Satuan ==</option>
-                                                <option value="Pcs (Pieces)">Pcs (Pieces)</option>
-                                                <option value="Set">Set</option>
-                                                <option value="Kg">Kg</option>
-                                                <option value="Liter">Liter</option>
-                                                <option value="Box">Box</option>
+                                                <option style="font-size: 1rem; font-weight: 500;" value="">== Pilih Satuan ==</option>
+                                                <option style="font-size: 1rem; font-weight: 500;" value="Pcs (Pieces)">Pcs (Pieces)</option>
+                                                <option style="font-size: 1rem; font-weight: 500;" value="Cup">Cup</option>
                                             </select>
                                         </div>
                                         @error('unit')
@@ -267,7 +264,7 @@
                                     </div>
 
                                     <!-- Info Alert -->
-                                    <div class="alert" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05)); border: 1px solid rgba(25, 118, 210, 0.2); border-radius: 10px; color: #1976d2; margin-bottom: 1.5rem;">
+                                    <div class="alert" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(66, 165, 245, 0.05)); border: 1px solid rgba(25, 118, 210, 0.2); border-radius: 10px; color: #000000; margin-bottom: 1.5rem;">
                                         <i class="fas fa-info-circle me-2"></i>
                                         <strong>Informasi:</strong> Pastikan semua data produk diperbarui dengan benar. Stok baru akan ditambahkan ke stok lama.
                                     </div>

@@ -11,7 +11,7 @@
                             <i class="fas fa-coffee me-2" style="font-size: 1.2rem;"></i>Data Produk Cafe
                             <i class="fas fa-boxes ms-2" style="font-size: 0.9rem;"></i>
                         </h5>
-                        <p class="text-white-50 mb-0" style="font-size: 0.8rem;">
+                        <p class="text-dark-50 mb-0" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-info-circle me-1"></i>Kelola produk dan inventaris sistem POS Cafe
                         </p>
                     </div>
@@ -24,41 +24,41 @@
             <div class="card-body p-3">
                 <div class="table-responsive">
                     <table id="example" class="table table-hover mb-0"
-                        style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(25, 118, 210, 0.08); font-size: 0.85rem;">
+                        style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(25, 118, 210, 0.08); font-size: 1rem;">
                         <thead
                             style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.9) 0%, rgba(66, 165, 245, 0.9) 100%); color: white;">
                             <tr>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-hashtag me-1"></i>No
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-image me-1"></i>Gambar
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-id-badge me-1"></i>Kode Produk
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-folder me-1"></i>Kategori
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-box me-1"></i>Nama Produk
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-tag me-1"></i>Merk
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-cubes me-1"></i>Stok
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-money-bill-wave me-1"></i>Harga Modal
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-hand-holding-usd me-1"></i>Harga Jual
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-weight me-1"></i>Satuan
                                 </th>
-                                <th class="border-0 py-2 px-3" style="font-weight: 500; font-size: 0.8rem;">
+                                <th class="border-0 py-2 px-3 " style="font-weight: 500; font-size: 1rem;">
                                     <i class="fas fa-cogs me-1"></i>Aksi
                                 </th>
                             </tr>

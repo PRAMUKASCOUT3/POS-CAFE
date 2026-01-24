@@ -41,7 +41,7 @@ class ProductEdit extends Component
             'id_category' => 'required',
             'name' => 'required|string|max:30',
             'brand' => 'required|string|max:30',
-            'stock' => 'required|integer',
+            'stock' => 'nullable|integer',
             'price_buy' => 'required|numeric',
             'price_sell' => 'required|numeric',
             'unit' => 'required|string|max:20',

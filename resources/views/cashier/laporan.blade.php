@@ -43,7 +43,7 @@
                 <!-- Transaction report table -->
                 <h5 class="card-title">Laporan Transaksi</h5>
                 <div class="table-responsive">
-                    <table id="example" class="table table-bordered">
+                    <table id="table" class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -71,7 +71,7 @@
                                     <td>Rp. {{ number_format($transactions->first()->amount_paid, '0') }}</td>
                                     <td><span class="badge bg-success">{{ $transactions->first()->status }}</span></td>
                                     <td>
-                                        <a href="{{ route('cashier.show', $transactions->first()->code) }}">
+                                        <a href="{{ route('cashier.show', $transactions->first()->code) }}" style="font-size: 1rem; font-weight: 500;">
                                             <i class="fas fa-eye"></i> Detail
                                         </a>
                                     </td>
@@ -104,4 +104,34 @@
             </div>
         </div>
     </div>
+
+    <style>
+        #table {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
+            font-size: 14.5px;
+            color: #212529;
+        }
+
+        #table thead th {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #table tbody td {
+            font-weight: 500;
+        }
+
+        #table tfoot td {
+            font-weight: 700 !important;
+            /* paksa bold */
+            color: #198754;
+            /* hijau tegas */
+            
+        }
+
+        #table tfoot tr {
+            background-color: #f8fdf9;
+            /* biar nggak pucat */
+        }
+    </style>
 @endsection

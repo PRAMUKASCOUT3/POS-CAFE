@@ -4,12 +4,12 @@
             <div class="cafe-card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h5 class="cafe-card-title">
+                        <h5 class="cafe-card-title text-white" >
                             <i class="bi bi-cup-hot me-2"></i>Data Pengguna / Kasir
                             <i class="fas fa-users ms-2"></i>
                         </h5>
-                        <p class="cafe-card-subtitle">
-                            <i class="bi bi-info-circle me-1"></i>Kelola data kasir dan pengguna sistem POS Cafe
+                        <p class="cafe-card-subtitle" style="font-size: 1rem; font-weight: 500;">
+                            <i class="bi bi-info-circle me-1" ></i>Kelola data kasir dan pengguna sistem POS Cafe
                         </p>
                     </div>
                     <button  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -97,10 +97,10 @@
                             <i class="fas fa-user-plus" style="font-size: 1.2rem; color: white;"></i>
                         </div>
                         <div>
-                            <h4 class="modal-title fw-bold" id="createUserModalLabel" style="font-family: 'Nunito', cursive; color: white;">
+                            <h4 class="modal-title fw-bold" id="createUserModalLabel" style="font-family: 'Nunito', cursive; color: rgb(0, 0, 0);">
                                 <i class="fas fa-mug-hot me-2" style="font-size: 0.9rem;"></i>Tambah Kasir Baru
                             </h4>
-                            <p class="modal-subtitle mb-0">
+                            <p class="modal-subtitle mb-0" style="font-size: 1rem; font-weight: 500;">
                                 <i class="fas fa-coffee me-1"></i>Daftarkan kasir untuk sistem POS Cafe Anda
                             </p>
                         </div>
@@ -123,7 +123,7 @@
 
                             <!-- Nama Lengkap -->
                             <div class="mb-4">
-                                <label for="name" class="form-label fw-semibold">
+                                <label for="name" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                     <i class="fas fa-user-tag me-2" style="color: #1976d2;"></i>Nama Lengkap Kasir
                                 </label>
                                 <div class="input-group">
@@ -145,7 +145,7 @@
 
                             <!-- Email -->
                             <div class="mb-4">
-                                <label for="email" class="form-label fw-semibold">
+                                <label for="email" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                     <i class="fas fa-at me-2" style="color: #1976d2;"></i>Alamat Email Aktif
                                 </label>
                                 <div class="input-group">
@@ -167,7 +167,7 @@
 
                             <!-- Password -->
                             <div class="mb-4">
-                                <label for="password" class="form-label fw-semibold">
+                                <label for="password" class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">
                                     <i class="fas fa-shield-alt me-2" style="color: #1976d2;"></i>Kata Sandi Keamanan
                                 </label>
                                 <div class="input-group">
@@ -185,7 +185,7 @@
                                         <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
                                     </div>
                                 @enderror
-                                <div class="form-text" style="color: #666; font-size: 0.75rem; background: rgba(25, 118, 210, 0.05); padding: 0.5rem; border-radius: 6px; margin-top: 0.5rem;">
+                                <div class="form-text font-bold" style="color: #666; font-size: 0.75rem; background: rgba(25, 118, 210, 0.05); padding: 0.5rem; border-radius: 6px; margin-top: 0.5rem;">
                                     <i class="fas fa-info-circle me-1"></i>Kata sandi harus minimal 8 karakter dengan kombinasi huruf dan angka untuk keamanan maksimal
                                 </div>
                             </div>
@@ -203,9 +203,9 @@
 
                         <!-- Footer Info -->
                         <div class="text-center mt-4 pt-3" style="border-top: 1px solid rgba(25, 118, 210, 0.1);">
-                            <small class="text-muted">
+                            <p class="text-muted" style="font-size: 1rem; font-weight: 500; color: white;">
                                 <i class="fas fa-shield-alt me-1"></i>Data kasir akan disimpan dengan aman dan terenkripsi
-                            </small>
+                            </p>
                         </div>
                     </div>
                 </div>

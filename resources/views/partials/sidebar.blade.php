@@ -7,7 +7,7 @@
             </div>
             <div class="brand-text">
                 <h5 class="mb-0 fw-bold cafe-title" style="font-family: Gravitas One">Widiant Coffee</h5>
-                <small class="text-light opacity-75">Sistem Point of Sale</small>
+                <small class="text-light opacity-75" style="font-size: 1rem; font-weight: 500;">Sistem Point of Sale</small>
             </div>
         </a>
 
@@ -103,15 +103,15 @@
                                 <div class="user-name fw-bold text-light">{{ $user->name }}</div>
                                 <small class="user-role">
                                     @if (Auth()->user()->isAdmin == 2)
-                                        <span class="text-light">
+                                        <span class="text-light font-bold">
                                             Administrator
                                         </span>
                                     @elseif (Auth()->user()->isAdmin == 1)
-                                        <span class="text-light">
+                                        <span class="text-light font-bold">
                                             Owner
                                         </span>
                                     @else
-                                        <span class="text-light">
+                                        <span class="text-light font-bold">
                                             Kasir
                                         </span>
                                     @endif

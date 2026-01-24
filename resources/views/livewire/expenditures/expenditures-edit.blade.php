@@ -8,17 +8,17 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
-                            <label>Tanggal <i class="fas fa-calendar-alt"></i></label>
+                            <label style="font-size: 1rem; font-weight: 500;">Tanggal <i class="fas fa-calendar-alt"></i></label>
                             <input type="date" class="form-control" value="{{ $expenditure->date }}" readonly>
                             @error('date') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="mb-3">
-                            <label>Deskripsi Pengeluaran <i class="fas fa-paragraph"></i></label>
+                            <label style="font-size: 1rem; font-weight: 500;">Deskripsi Pengeluaran <i class="fas fa-paragraph"></i></label>
                             <textarea  class="form-control" cols="10" readonly>{{ $expenditure->description }}</textarea>
                             @error('description') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="mb-3">
-                            <label>Nominal Pengeluaran <i class="fas fa-dollar-sign"></i></label>
+                            <label style="font-size: 1rem; font-weight: 500;">Nominal Pengeluaran <i class="fas fa-dollar-sign"></i></label>
                             <input type="number" class="form-control" value="{{ $expenditure->nominal }}" readonly>
                             @error('nominal') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
@@ -31,17 +31,17 @@
                     <div class="card-body">
                         <form wire:submit="update">
                             <div class="mb-3">
-                                <label>Tanggal <i class="fas fa-calendar-alt"></i></label>
+                                <label style="font-size: 1rem; font-weight: 500;">Tanggal <i class="fas fa-calendar-alt"></i></label>
                                 <input type="date" class="form-control" wire:model="date" required>
                                 @error('date') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label>Deskripsi Pengeluaran <i class="fas fa-paragraph"></i></label>
+                                <label style="font-size: 1rem; font-weight: 500;">Deskripsi Pengeluaran <i class="fas fa-paragraph"></i></label>
                                 <textarea wire:model='description' class="form-control" cols="10"></textarea>
                                 @error('description') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3">
-                                <label>Nominal Pengeluaran <i class="fas fa-dollar-sign"></i></label>
+                                <label style="font-size: 1rem; font-weight: 500;">Nominal Pengeluaran <i class="fas fa-dollar-sign"></i></label>
                                 <input type="number" class="form-control" wire:model="nominal" required>
                                 @error('nominal') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>

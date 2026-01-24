@@ -11,7 +11,7 @@
                             <i class="fas fa-coffee me-2" style="font-size: 1.2rem;"></i>Data Kategori Cafe
                             <i class="fas fa-tags ms-2" style="font-size: 0.9rem;"></i>
                         </h5>
-                        <p class="text-white-50 mb-0" style="font-size: 0.8rem;">
+                        <p class="text-dark-50 mb-0" style="font-size: 1rem; font-weight: 500;">
                             <i class="fas fa-info-circle me-1"></i>Kelola kategori produk sistem POS Cafe
                         </p>
                     </div>
@@ -92,8 +92,8 @@
                             <i class="fas fa-layer-group"></i>
                         </div>
                         <div>
-                            <h5 class="modal-title fw-bold mb-0" id="exampleModalLabel">Tambah Kategori Baru</h5>
-                            <small class="text-light opacity-75">
+                            <h5 class="modal-title fw-bold mb-0 text-white" id="exampleModalLabel">Tambah Kategori Baru</h5>
+                            <small class="text-light opacity-75" style="font-size: 1rem; font-weight: 500;">
                                 <i class="fas fa-tags me-1"></i>Tambahkan kategori menu di POS Café Anda
                             </small>
                         </div>
@@ -105,7 +105,7 @@
                 <div class="modal-body">
                     <form wire:submit.prevent="save">
                         <div class="mb-3">
-                            <label class="form-label fw-semibold">Nama Kategori</label>
+                            <label class="form-label fw-semibold" style="font-size: 1rem; font-weight: 500;">Nama Kategori</label>
                             <input type="text" class="form-control" wire:model="name"
                                 placeholder="Masukkan nama kategori..." required>
                             @error('name')
@@ -124,7 +124,7 @@
                     </form>
                 </div>
 
-                <div class="modal-footer bg-light border-0 text-muted small">
+                <div class="modal-footer bg-light border-0" style="font-size: 1rem; font-weight: 500;">
                     <i class="fas fa-info-circle me-1"></i>Pastikan nama kategori unik agar tidak duplikat.
                 </div>
             </div>
